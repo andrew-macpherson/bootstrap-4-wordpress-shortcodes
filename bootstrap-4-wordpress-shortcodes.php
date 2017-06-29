@@ -22,8 +22,8 @@ add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_styl
 add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_script' );
 
 
+//Remove empty paragraphs
 function stripParagraphs($content){
-
 	if ( '</p>' == substr( $content, 0, 4 )and '<p>' == substr( $content, strlen( $content ) - 3 ) )
         $content = substr( $content, 4, strlen( $content ) - 7 );
 
@@ -34,7 +34,6 @@ function stripParagraphs($content){
 //Containers
 function container($atts,$content){
 	extract( shortcode_atts( array(
-        'id' 	=> '',
         'class' => '',
         'fluid' => 'false'
     ), $atts ) );
@@ -54,7 +53,6 @@ add_shortcode('container','container');
 //Rows
 function row($atts,$content){
 	extract( shortcode_atts( array(
-        'id' 		=> '',
         'class' 	=> '',
         'gutters' 	=> 'true'
     ), $atts ) );
@@ -74,7 +72,6 @@ add_shortcode('row','row');
 //Columns
 function col($atts,$content){
 	extract( shortcode_atts( array(
-        'id' 		=> '',
         'class' 	=> '',
         'size'		=> '12'
     ), $atts ) );
