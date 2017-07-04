@@ -2,6 +2,7 @@
 //Badge
 function card($atts,$content){
 	extract( shortcode_atts( array(
+		'header'		=> '',
         'class' 		=> '',
         'title' 		=> '',
         'subtitle'		=> '',
@@ -16,6 +17,9 @@ function card($atts,$content){
     $return = '';
 
     $return .= '<div class="card">';
+    	if($header != '')
+    		$return .= '<div class="card-header">'.$header.'</div>';
+
     	if($image_url != '')
     		$return .= '<img class="card-img-top" src="'.$image_url.'" alt="'.$image_alt.'">';
     	$return .= '<div class="card-block">';
