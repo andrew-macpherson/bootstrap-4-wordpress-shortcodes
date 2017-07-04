@@ -37,3 +37,4 @@ include( plugin_dir_path( __FILE__ ) . 'components/alert.php');
 include( plugin_dir_path( __FILE__ ) . 'components/badge.php');
 include( plugin_dir_path( __FILE__ ) . 'components/cards.php');
 include( plugin_dir_path( __FILE__ ) . 'components/breadcrumb.php');
+include( plugin_dir_path( __FILE__ ) . 'components/buttons.php');
