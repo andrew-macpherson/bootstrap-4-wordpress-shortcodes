@@ -59,6 +59,13 @@ function carousel_item($atts,$content){
 
     $return .= '<div class="carousel-item '.$class.'">';
         $return .= '<img class="d-block img-fluid" src="'.$image_url.'" alt="'.$image_alt.'">';
+
+        if($content != ''){
+            $return .= '<div class="carousel-caption">';
+                $return .= $content;
+            $return .= '</div>';
+        }
+
     $return .= '</div>';
 
     return $return;
