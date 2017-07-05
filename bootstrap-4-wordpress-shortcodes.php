@@ -39,3 +39,4 @@ include( plugin_dir_path( __FILE__ ) . 'components/cards.php');
 include( plugin_dir_path( __FILE__ ) . 'components/breadcrumb.php');
 include( plugin_dir_path( __FILE__ ) . 'components/buttons.php');
 include( plugin_dir_path( __FILE__ ) . 'components/carousel.php');
+include( plugin_dir_path( __FILE__ ) . 'components/collapse.php');
