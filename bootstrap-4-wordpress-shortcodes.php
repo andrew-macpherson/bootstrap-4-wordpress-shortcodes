@@ -40,3 +40,5 @@ include( plugin_dir_path( __FILE__ ) . 'components/breadcrumb.php');
 include( plugin_dir_path( __FILE__ ) . 'components/buttons.php');
 include( plugin_dir_path( __FILE__ ) . 'components/carousel.php');
 include( plugin_dir_path( __FILE__ ) . 'components/collapse.php');
+include( plugin_dir_path( __FILE__ ) . 'components/dropdowns.php');
+include( plugin_dir_path( __FILE__ ) . 'components/jumbotron.php');
