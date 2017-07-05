@@ -15,7 +15,7 @@ function bootstrap_4_wordpress_shortcodes_enqueue_style() {
 }
 
 function bootstrap_4_wordpress_shortcodes_enqueue_script() {
-	wp_enqueue_script( 'my-js', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/js/bootstrap.min.js', false );
+	wp_enqueue_script( 'my-js', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/js/bootstrap.min.js', array('jquery') );
 }
 
 add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_style' );
@@ -38,3 +38,4 @@ include( plugin_dir_path( __FILE__ ) . 'components/badge.php');
 include( plugin_dir_path( __FILE__ ) . 'components/cards.php');
 include( plugin_dir_path( __FILE__ ) . 'components/breadcrumb.php');
 include( plugin_dir_path( __FILE__ ) . 'components/buttons.php');
+include( plugin_dir_path( __FILE__ ) . 'components/carousel.php');
