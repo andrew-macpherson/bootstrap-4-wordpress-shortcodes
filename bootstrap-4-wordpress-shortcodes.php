@@ -15,7 +15,8 @@ function bootstrap_4_wordpress_shortcodes_enqueue_style() {
 }
 
 function bootstrap_4_wordpress_shortcodes_enqueue_script() {
-	wp_enqueue_script( 'my-js', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/js/bootstrap.min.js', array('jquery') );
+	wp_enqueue_script( 'tether', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/tether/tether.min.js', array('jquery') );
+	wp_enqueue_script( 'bootstrap', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/js/bootstrap.min.js', array('jquery','tether') );
 }
 
 add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_style' );
@@ -45,3 +46,6 @@ include( plugin_dir_path( __FILE__ ) . 'components/jumbotron.php');
 include( plugin_dir_path( __FILE__ ) . 'components/listgroups.php');
 include( plugin_dir_path( __FILE__ ) . 'components/modals.php');
 include( plugin_dir_path( __FILE__ ) . 'components/navs.php');
+include( plugin_dir_path( __FILE__ ) . 'components/navbar.php');
+include( plugin_dir_path( __FILE__ ) . 'components/pagination.php');
+include( plugin_dir_path( __FILE__ ) . 'components/popover.php');
