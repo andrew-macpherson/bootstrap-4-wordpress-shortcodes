@@ -50,3 +50,4 @@ include( plugin_dir_path( __FILE__ ) . 'components/navbar.php');
 include( plugin_dir_path( __FILE__ ) . 'components/pagination.php');
 include( plugin_dir_path( __FILE__ ) . 'components/popover.php');
 include( plugin_dir_path( __FILE__ ) . 'components/progress.php');
+include( plugin_dir_path( __FILE__ ) . 'components/tooltips.php');

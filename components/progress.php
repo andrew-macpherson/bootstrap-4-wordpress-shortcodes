@@ -31,7 +31,7 @@ function progress_bar($atts,$content){
     $content = stripParagraphs($content);
 
     $return = '';
-    $return .= '<div class="progress-bar bg-'.$style.' '.$class.'" role="progressbar" style="width: '.$percent.'%" aria-valuenow="'.$percent.'" aria-valuemin="0" aria-valuemax="100"></div>';
+    $return .= '<div class="progress-bar bg-'.$style.' '.$class.'" role="progressbar" style="width: '.$percent.'%" aria-valuenow="'.$percent.'" aria-valuemin="0" aria-valuemax="100">'.$content.'</div>';
 
     return $return;
 }
