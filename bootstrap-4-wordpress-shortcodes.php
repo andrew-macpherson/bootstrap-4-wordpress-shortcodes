@@ -42,3 +42,6 @@ include( plugin_dir_path( __FILE__ ) . 'components/carousel.php');
 include( plugin_dir_path( __FILE__ ) . 'components/collapse.php');
 include( plugin_dir_path( __FILE__ ) . 'components/dropdowns.php');
 include( plugin_dir_path( __FILE__ ) . 'components/jumbotron.php');
+include( plugin_dir_path( __FILE__ ) . 'components/listgroups.php');
+include( plugin_dir_path( __FILE__ ) . 'components/modals.php');
+include( plugin_dir_path( __FILE__ ) . 'components/navs.php');

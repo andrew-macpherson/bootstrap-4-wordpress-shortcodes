@@ -5,7 +5,9 @@ function button($atts,$content){
         'class' 		=> '',
         'style'			=> 'primary',
         'link'			=> '',
-        'toggle'        => ''
+        'toggle'        => '',
+        'target'        => '',
+        'selector'      => 'a'
     ), $atts ) );
 
 
@@ -14,7 +16,7 @@ function button($atts,$content){
 
     $return = '';
 
-	$return .= '<a href="'.$link.'" type="button" class="btn btn-'.$style.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").'>'.$content.'</a>';
+	$return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' type="button" class="btn btn-'.$style.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").' '.(($target != '')?"data-target='".$target."'" : "").'>'.$content.'</'.$selector.'>';
 
 	return $return;
 }
