@@ -16,7 +16,7 @@ function button($atts,$content){
 
     $return = '';
 
-	$return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' type="button" class="btn btn-'.$style.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").' '.(($target != '')?"data-target='".$target."'" : "").'>'.$content.'</'.$selector.'>';
+	$return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' type="button" class="btn btn-'.$style.' '.$class.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").' '.(($target != '')?"data-target='".$target."'" : "").'>'.$content.'</'.$selector.'>';
 
 	return $return;
 }
