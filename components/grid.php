@@ -3,6 +3,7 @@
 function container($atts,$content){
 	extract( shortcode_atts( array(
         'class' => '',
+        'inner_class' => '',
         'fluid' => 'false'
     ), $atts ) );
 
@@ -11,7 +12,7 @@ function container($atts,$content){
     $content = stripParagraphs($content);
 
     $return = '';
-    $return .= '<div class="container'.(($fluid == 'true')? '-fluid ':'').' '.(( $class != '')? $class : "" ).'">'.force_balance_tags($content).'</div>';
+    $return .= '<div class="container'.(($fluid == 'true')? '-fluid ':'').' '.(( $class != '')? $class : "" ).'"><div class="'.$inner_class.'">'.force_balance_tags($content).'</div></div>';
 
 	return $return;
 }
