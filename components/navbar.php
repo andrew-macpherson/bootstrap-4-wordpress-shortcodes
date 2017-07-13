@@ -5,7 +5,8 @@ function navbar($atts,$content){
         'class' 		=> '',
         'brand_name'    => '',
         'brand_image'   => '',
-        'brand_url'   => ''
+        'brand_url'   => '',
+        'id'            => 'navbarSupportedContent'
     ), $atts ) );
 
 
@@ -16,7 +17,7 @@ function navbar($atts,$content){
     $return .= '<nav class="navbar navbar-toggleable-md navbar-light bg-faded '.$class.'">';
         
         //RESPONSIVE BUTTON
-        $return .= '<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">';
+        $return .= '<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#'.$id.'" aria-controls="'.$id.'" aria-expanded="false" aria-label="Toggle navigation">';
             $return .= '<span class="navbar-toggler-icon"></span>';
         $return .= '</button>';
 
@@ -30,7 +31,7 @@ function navbar($atts,$content){
             $return .= '</a>';
         }
 
-        $return .= '<div class="collapse navbar-collapse" id="navbarSupportedContent">';
+        $return .= '<div class="collapse navbar-collapse" id="'.$id.'">';
 
             $return .= $content;
         $return .= '</div>';
