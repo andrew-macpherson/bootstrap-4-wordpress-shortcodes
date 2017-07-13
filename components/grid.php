@@ -22,7 +22,7 @@ function container($atts,$content){
     }
 
     $return = '';
-    $return .= '<div class="container'.(($fluid == 'true')? '-fluid ':'').' '.(( $class != '')? $class : "" ).'" '.(($openStyle) ? 'style="':'').' '.(($background_image != '') ? 'background-image: url('.$background_image.'); ':'').' '.(($background_color != '') ? 'background-color: '.$background_color.'; ':'').' '.(($padding != '') ? 'padding: '.$padding.'; ':'').' '.(($margin != '') ? 'margin: '.$margin.'; ':'').'><div class="'.$inner_class.'">'.force_balance_tags($content).'</div></div>';
+    $return .= '<div class="container'.(($fluid == 'true')? '-fluid ':'').' '.(( $class != '')? $class : "" ).'" '.(($openStyle) ? 'style="':'').' '.(($background_image != '') ? 'background-image: url('.$background_image.'); ':'').' '.(($background_color != '') ? 'background-color: '.$background_color.'; ':'').' '.(($padding != '') ? 'padding: '.$padding.'; ':'').' '.(($margin != '') ? 'margin: '.$margin.'; ':'').' '.(($openStyle) ? '"':'').'><div class="'.$inner_class.'">'.force_balance_tags($content).'</div></div>';
 
 	return $return;
 }
