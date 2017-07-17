@@ -22,6 +22,7 @@ add_shortcode('card','card');
 function card_img($atts){
     extract( shortcode_atts( array(
         'class'         => '',
+                'position'  => 'top',
                 'url'       => '',
                 'link'      => '',
                 'target'    => '_self',
@@ -31,7 +32,7 @@ function card_img($atts){
         // $content = do_shortcode( shortcode_unautop( $content ) );
         // $content = stripParagraphs($content);
 
-        $return = '<img src="' . $url . '" class="card-img-top ' . (( $class != '') ? $class : "" ) . '" alt="' . $alt . '">';
+        $return = '<img src="' . $url . '" class="card-img-' . $position . ' ' . (( $class != '') ? $class : "" ) . '" alt="' . $alt . '">';
         if( !empty($link) ) {
             $return = '<a href="' . $link . '" target="' . $target . '">' . $return . '</a>';
         }
