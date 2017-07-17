@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Badge
 function card($atts,$content){
 	extract( shortcode_atts( array(
@@ -16,7 +16,7 @@ function card($atts,$content){
 
     $return = '';
 
-    $return .= '<div class="card">';
+    $return .= '<div class="card ' . (( $class != '') ? $class : "" ) . '">';
     	if($header != '')
     		$return .= '<div class="card-header">'.$header.'</div>';
 
