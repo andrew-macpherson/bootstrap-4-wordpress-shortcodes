@@ -32,7 +32,8 @@ add_shortcode('modal','modal');
 function modal_header($atts,$content){
     extract( shortcode_atts( array(
         'class'         => '',
-        'close'         => 'true'
+        'close'         => 'true',
+        'selector'      => 'h5'
     ), $atts ) );
 
     $content = do_shortcode( shortcode_unautop( $content ) );
@@ -41,7 +42,7 @@ function modal_header($atts,$content){
 
     $return = '';
     $return .= '<div class="modal-header">';
-        $return .= $content;
+        $return .= '<'.$selector.' class="modal-title">'.$content.'</'.$selector.'>';
         if($close == 'true'){
             $return .= '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
                 $return .= '<span aria-hidden="true">&times;</span>';
