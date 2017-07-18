@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function button($atts,$content){
 	extract( shortcode_atts( array(
@@ -16,7 +16,7 @@ function button($atts,$content){
 
     $return = '';
 
-	$return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' '.(($selector == 'button')?"type=\"button\"":"").' class="btn btn-'.$style.' '.$class.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").' '.(($target != '')?"data-target='".$target."'" : "").'>'.$content.'</'.$selector.'>';
+    $return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' '.(($selector == 'button')?"type=\"button\"":"").' class="btn btn-'.$style.' '.$class.'" role="button" '.(($toggle != '')?"data-toggle='".$toggle."'" : "").' '.(($target != '')?"data-target='".$target."'" : ""). ' ' . ($dismiss_modal ? 'data-dismiss="modal"' : "") .'>'.$content.'</'.$selector.'>';
 
 	return $return;
 }
