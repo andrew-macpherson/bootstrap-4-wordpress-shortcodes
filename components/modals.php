@@ -1,9 +1,10 @@
-<?php 
+<?php
 
 function modal($atts,$content){
 	extract( shortcode_atts( array(
         'class' 		=> '',
-        'id'            => ''
+        'id'            => '',
+        'size'          => ''
     ), $atts ) );
 
 
@@ -12,7 +13,7 @@ function modal($atts,$content){
 
     $return = '';
 	$return .= '<div class="modal fade '.$class.'" id="'.$id.'" role="dialog" tabindex="-1" aria-labelledby="'.$id.'Label" aria-hidden="true">';
-        $return .= '<div class="modal-dialog" role="document">';
+        $return .= '<div class="modal-dialog '. (!empty($size) ? 'modal-' . $size : '' ) . '" role="document">';
             $return .= '<div class="modal-content">';
               $return .= $content;
             $return .= '</div>';
