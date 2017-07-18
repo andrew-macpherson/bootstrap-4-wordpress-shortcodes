@@ -11,7 +11,7 @@ License: GPL2
 
 //Load bootstrap
 function bootstrap_4_wordpress_shortcodes_enqueue_style() {
-	wp_enqueue_style( 'core', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/css/bootstrap.min.css', false ); 
+	wp_enqueue_style( 'bootstrap', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/css/bootstrap.min.css', false ); 
 }
 
 function bootstrap_4_wordpress_shortcodes_enqueue_script() {
@@ -19,7 +19,7 @@ function bootstrap_4_wordpress_shortcodes_enqueue_script() {
 	wp_enqueue_script( 'bootstrap', plugins_url().'/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/js/bootstrap.min.js', array('jquery','tether') );
 }
 
-add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_style' );
+add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_style',20 );
 add_action( 'wp_enqueue_scripts', 'bootstrap_4_wordpress_shortcodes_enqueue_script' );
 
 
