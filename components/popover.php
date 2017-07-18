@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function popover($atts,$content){
     extract( shortcode_atts( array(
@@ -7,6 +7,7 @@ function popover($atts,$content){
         'container'         => 'body',
         'toggle'            => 'popover',
         'placement'         => 'top',
+        'trigger'           => 'click',
         'popover_content'   => '',
         'popover_title'   => ''
     ), $atts ) );
@@ -18,7 +19,7 @@ function popover($atts,$content){
     $content = stripParagraphs($content);
 
     $return = '';
-    $return .= '<button type="button" class="btn btn-'.$style.' '.$class.'" data-container="'.$container.'" data-toggle="'.$toggle.'" data-placement="'.$placement.'" title="'.$popover_title.'" data-content="'.$popover_content.'">';
+    $return .= '<button type="button" class="btn btn-'.$style.' '.$class.'" data-container="'.$container.'" data-toggle="'.$toggle.'" data-placement="'.$placement.'" data-trigger="'. $trigger .'" title="'.$popover_title.'" data-content="'.$popover_content.'">';
         $return .= $content;
     $return .= '</button>';
 
