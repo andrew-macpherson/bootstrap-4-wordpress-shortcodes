@@ -1,10 +1,11 @@
-<?php 
+<?php
 
 function carousel($atts,$content){
     extract( shortcode_atts( array(
         'id'            => 'carouselControls',
         'class'         => '',
         'controls'      => 'true',
+        'content'       => $content,
         'indicators'    => 'false'
     ), $atts ) );
 
@@ -50,6 +51,7 @@ function carousel_item($atts,$content){
     extract( shortcode_atts( array(
         'class'         => '',
         'image_url'     => '',
+        'content'       => $content,
         'image_alt'     => ''
     ), $atts ) );
 
