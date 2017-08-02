@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Containers
 function container($atts,$content){
 	extract( shortcode_atts( array(
@@ -60,7 +60,7 @@ function col($atts,$content){
     $content = stripParagraphs($content);
 
     $return = '';
-    $return .= '<div class="col'.(($size != '')? '-'.$size : ' ').' '.(( $class != '')? $class : "" ).'">'.force_balance_tags($content).'</div>';
+    $return .= '<div class="col col'.(($size != '')? '-'.$size : ' ').' '.(( $class != '')? $class : "" ).'">'.force_balance_tags($content).'</div>';
 
 	return $return;
 }
